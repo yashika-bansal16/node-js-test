@@ -22,3 +22,19 @@ fs.writeFile('myfile.txt','Hello World',(err)=>{
     if(err) throw err;
     console.log('File created successfully');
 });
+
+fs.writeFile('myfile.txt','Hello Node.js',(err)=>{
+    if(err) throw err;
+    console.log('File updated successfully');
+});
+fs.readFile('myfile.txt','utf-8',(err,data)=>{
+    if(err) throw err;
+    else{
+        console.log('File read successfully');
+    }
+    console.log(data);
+});
+fs.appendFile('myfile.txt',' Welcome to Node.js',(err)=>{
+    if(err) throw err;
+    console.log('File appended successfully');
+});
