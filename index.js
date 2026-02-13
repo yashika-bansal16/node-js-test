@@ -37,3 +37,7 @@ fs.rename('myfile_copy.txt','myfile_renamed.txt',(err)=>{
     if(err) throw err;
     console.log('File renamed successfully');
 });
+fs.unlink('myfile_renamed.txt',(err)=>{
+    if(err) throw err;
+    console.log('File deleted successfully');
+});
